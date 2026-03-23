@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <title>La Mer SHAMPO — Професійний шампунь для волосся</title>
     <style>
-           /* Додаємо стилі для бокових фото */
-    .side-photo {
-        position: absolute;
-        width: 100px;
-        border-radius: 10px;
-        opacity: 0.9;
-    }
+        /* ================= Бокові маленькі фото ================= */
+        .side-photo {
+            position: absolute;
+            width: 100px;
+            border-radius: 10px;
+            opacity: 0.9;
+            z-index: 1; /* поверх overlay */
+        }
+        .side-left { top: 100px; left: -120px; }
+        .side-right-1 { top: 150px; right: -120px; }
+        .side-right-2 { top: 350px; right: -100px; }
 
-    .side-left { top: 100px; left: -120px; }
-    .side-right-1 { top: 150px; right: -120px; }
-    .side-right-2 { top: 350px; right: -100px; }
+        @media (max-width: 800px) {
+            .side-photo { display: none; }
+        }
 
-    @media (max-width: 800px) {
-        .side-photo { display: none; }
-    }
+        /* ================= Основні стилі сайту ================= */
         body, html {
             margin: 0;
             padding: 0;
@@ -37,6 +39,7 @@
             align-items: center;
             padding: 25px 15px;
             text-align: center;
+            position: relative; /* щоб absolute фото позиціонувалися від overlay */
         }
 
         h1 {
@@ -148,7 +151,6 @@
         <a href="#" class="btn">Придбати</a>
 
         <div class="features">
-            <!-- Іконка очищення -->
             <div class="feature">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24">
                     <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/>
@@ -157,8 +159,7 @@
                 <h3>Глибоке очищення</h3>
                 <p>Дбайливо усуває забруднення та стайлінг без шкоди для волосся.</p>
             </div>
-            
-            <!-- Іконка зміцнення -->
+
             <div class="feature">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24">
                     <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM12 19a7 7 0 1 1 7-7 7.008 7.008 0 0 1-7 7z"/>
@@ -167,7 +168,6 @@
                 <p>Підтримує та зміцнює корені для здорового росту волосся.</p>
             </div>
 
-            <!-- Іконка блиску -->
             <div class="feature">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24">
                     <path d="M12 0l3 7h7l-5.5 4.5L18 19l-6-4.5L6 19l1.5-7.5L2 7h7z"/>
@@ -179,7 +179,6 @@
 
         <div class="reviews">
             <h2>Відгуки клієнтів</h2>
-
             <div class="review">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
                 <p>“Волосся стало шовковистим і блискучим вже після першого застосування!” — Олеся, Київ</p>
@@ -195,11 +194,15 @@
         </div>
 
         <footer>© 2026 La Mer SHAMPO | Усі права захищені</footer>
-    </div>
-    <!-- Ліва декоративна фотографія -->
-<img src="photo_2025-06-16_22-44-03.jpg" class="side-photo side-left" alt="Фото ліворуч">
 
-<!-- Дві праві декоративні фотографії -->
+        <!-- ================= Бокові фото ================= -->
+        <img src="photo1.jpeg" class="side-photo side-left" alt="Фото ліворуч">
+        <img src="photo2.jpeg" class="side-photo side-right-1" alt="Фото праворуч 1">
+        <img src="photo3.jpeg" class="side-photo side-right-2" alt="Фото праворуч 2">
+
+    </div>
+</body>
+</html>
 <img src="photo_2025-06-03 16.53.50.jpeg" class="side-photo side-right-1" alt="Фото праворуч 1">
 <img src="photo_2025-06-03 16.53.40.jpeg" class="side-photo side-right-2" alt="Фото праворуч 2">
 </body>
