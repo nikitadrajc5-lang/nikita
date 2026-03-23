@@ -1,47 +1,185 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<title>La Mer SHAMPO — Професійний шампунь</title>
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: url('https://images.pexels.com/photos/13137903/pexels-photo-13137903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-}
-.overlay {
-    position: relative; 
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    text-align: center;
-}
-h1 { font-size: 50px; margin-bottom: 20px; }
-p.description { font-size: 20px; margin-bottom: 30px; line-height: 1.6; }
-.btn { background-color: #28a745; color: white; padding: 18px 45px; margin-top: 18px; border: none; border-radius: 8px; text-decoration: none; font-size: 22px; cursor: pointer;}
-.btn:hover { background-color: #218838; }
+    <meta charset="UTF-8">
+    <title>La Mer SHAMPO — Професійний шампунь для волосся</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/13137903/pexels-photo-13137903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
 
-@media (max-width: 800px) {
-    h1 { font-size: 36px; }
-    p.description { font-size: 18px; }
-    .btn { font-size: 18px; padding: 14px 30px;}
-}
-</style>
+        .overlay {
+            background-color: rgba(0,0,0,0.65);
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 12px;
+        }
+
+        p.description {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: #28a745;
+            color: white;
+            padding: 18px 45px;
+            margin-top: 18px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 35px;
+        }
+
+        .feature {
+            background-color: rgba(255,255,255,0.15);
+            border-radius: 14px;
+            padding: 22px;
+            margin: 10px;
+            flex: 1 1 260px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .feature svg {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 12px;
+        }
+
+        .feature h3 {
+            font-size: 20px;
+            color: #ffd54f;
+            margin-bottom: 10px;
+        }
+
+        .reviews {
+            margin-top: 45px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .review {
+            background-color: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 14px 0;
+            text-align: left;
+        }
+
+        .review .stars {
+            color: #ffd700;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .review p {
+            font-size: 16px;
+            line-height: 1.4;
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 42px;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 36px; }
+            .btn { font-size: 18px; padding: 14px 30px;}
+            p.description { font-size: 16px;}
+            .feature h3 { font-size: 18px;}
+        }
+    </style>
 </head>
 <body>
-<div class="overlay">
+    <div class="overlay">
+        <h1>La Mer SHAMPO</h1>
+        <p class="description">
+            La Mer SHAMPO — професійний шампунь для глибокого очищення, живлення та зміцнення волосся.
+            Його формула видаляє забруднення та надлишки себуму, не пересушуючи шкіру голови, 
+            сприяє відновленню структури волосся і робить його блискучим та шовковистим після кожного миття.
+        </p>
+        
+        <a href="#" class="btn">Придбати</a>
 
-    <h1>La Mer SHAMPO</h1>
-    <p class="description">
-        La Mer SHAMPO — професійний шампунь для глибокого очищення та живлення волосся. 
-        Робить волосся блискучим, шовковистим та здоровим після кожного миття.
-    </p>
+        <div class="features">
+            <!-- Іконка очищення -->
+            <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/>
+                    <path d="M12 6a6 6 0 0 0-6 6h2a4 4 0 0 1 4-4z"/>
+                </svg>
+                <h3>Глибоке очищення</h3>
+                <p>Дбайливо усуває забруднення та стайлінг без шкоди для волосся.</p>
+            </div>
 
-    <a href="ТВОЄ_АФІЛІЙТНЕ_ПОСИЛАННЯ" class="btn">Придбати</a>
+            <!-- Іконка зміцнення -->
+            <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM12 19a7 7 0 1 1 7-7 7.008 7.008 0 0 1-7 7z"/>
+                </svg>
+                <h3>Зміцнення</h3>
+                <p>Підтримує та зміцнює корені для здорового росту волосся.</p>
+            </div>
 
-</div>
+            <!-- Іконка блиску -->
+            <div class="feature">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24">
+                    <path d="M12 0l3 7h7l-5.5 4.5L18 19l-6-4.5L6 19l1.5-7.5L2 7h7z"/>
+                </svg>
+                <h3>Блиск та свіжість</h3>
+                <p>Надає волоссю природного блиску та легкості після миття.</p>
+            </div>
+        </div>
+
+        <div class="reviews">
+            <h2>Відгуки клієнтів</h2>
+
+            <div class="review">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>“Волосся стало шовковистим і блискучим вже після першого застосування!” — Олеся, Київ</p>
+            </div>
+            <div class="review">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>“Помітила зміцнення коренів та менше випадіння. Дуже задоволена!” — Андрій, Львів</p>
+            </div>
+            <div class="review">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>“Неймовірний аромат і результат — волосся виглядає здоровим.” — Катерина, Одеса</p>
+            </div>
+        </div>
+
+        <footer>© 2026 La Mer SHAMPO | Усі права захищені</footer>
+    </div>
 </body>
 </html>
