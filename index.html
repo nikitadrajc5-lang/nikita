@@ -4,23 +4,6 @@
     <meta charset="UTF-8">
     <title>La Mer SHAMPO — Професійний шампунь для волосся</title>
     <style>
-        /* ================= Бокові маленькі фото ================= */
-        .side-photo {
-            position: absolute;
-            width: 100px;
-            border-radius: 10px;
-            opacity: 0.9;
-            z-index: 1; /* поверх overlay */
-        }
-        .side-left { top: 100px; left: -120px; }
-        .side-right-1 { top: 150px; right: -120px; }
-        .side-right-2 { top: 350px; right: -100px; }
-
-        @media (max-width: 800px) {
-            .side-photo { display: none; }
-        }
-
-        /* ================= Основні стилі сайту ================= */
         body, html {
             margin: 0;
             padding: 0;
@@ -39,7 +22,6 @@
             align-items: center;
             padding: 25px 15px;
             text-align: center;
-            position: relative; /* щоб absolute фото позиціонувалися від overlay */
         }
 
         h1 {
@@ -64,12 +46,48 @@
             text-decoration: none;
             font-size: 22px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px #1e7e34;
         }
 
-        .btn:hover {
-            background-color: #218838;
-        }
+  .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 18px 45px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px #1e7e34;
+    position: relative;
+    overflow: hidden;
+}
 
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: -100%;
+    left: -100%;
+    background: rgba(255,255,255,0.15);
+    transform: rotate(45deg);
+    transition: all 0.7s ease;
+}
+
+.btn:hover::after {
+    top: -50%;
+    left: -50%;
+}
+
+.btn:hover {
+    background-color: #218838;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px #1c7430;
+}
         .features {
             display: flex;
             flex-wrap: wrap;
@@ -194,16 +212,6 @@
         </div>
 
         <footer>© 2026 La Mer SHAMPO | Усі права захищені</footer>
-
-        <!-- ================= Бокові фото ================= -->
-        <img src="photo1.jpeg" class="side-photo side-left" alt="Фото ліворуч">
-        <img src="photo2.jpeg" class="side-photo side-right-1" alt="Фото праворуч 1">
-        <img src="photo3.jpeg" class="side-photo side-right-2" alt="Фото праворуч 2">
-
     </div>
-</body>
-</html>
-<img src="photo_2025-06-03 16.53.50.jpeg" class="side-photo side-right-1" alt="Фото праворуч 1">
-<img src="photo_2025-06-03 16.53.40.jpeg" class="side-photo side-right-2" alt="Фото праворуч 2">
 </body>
 </html>
