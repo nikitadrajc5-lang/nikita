@@ -181,6 +181,25 @@
 
         <footer>© 2026 La Mer SHAMPO | Усі права захищені</footer>
     </div>
+    /* Бокові маленькі фото */
+.side-photo {
+    position: absolute;
+    width: 100px;        /* маленькі картинки */
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+/* Ліва сторона */
+.side-left { top: 100px; left: -120px; }
+
+/* Права сторона */
+.side-right-1 { top: 150px; right: -120px; }
+.side-right-2 { top: 350px; right: -100px; }
+
+/* Ховаємо на мобільних */
+@media (max-width: 800px) {
+    .side-photo { display: none; }
+}
     <!-- Ліва декоративна фотографія -->
 <img src="photo_2025-06-16_22-44-03.jpg" class="side-photo side-left" alt="Фото ліворуч">
 
