@@ -1,103 +1,57 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<title>Заработок онлайн</title>
+<?php
+$data = [
+	'api_key' => '[api_key]',
+	'added' => [
+		'start' => 1774216800,
+		'end' => 1774303199,
+	],
+	'offer_geo' => 'CZ',
+	'offer_model' => 'cod_cpa',
+	'subid' => ['1a2b3c', '4d5e6f'],
+	'subid1' => 'subid1',
+	'subid2' => '',
+	'subid3' => '',
+	'subid4' => '',
+	'subid5' => '',
+	'page' => 7
+];
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background-color: #111;
-    color: white;
-    text-align: center;
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, 'https://hamsters.run/api/leads/get/');
+curl_setopt($curl, CURLOPT_POST, true);
+curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($curl);
+$response = json_decode($response, true);
+curl_close($curl);
+?>
+			
+Ответ в случаи успеха:
+{
+	"api":{
+		"success":true,
+		"data":[
+			{
+				"lead_id": 123,
+				"lead_added":1774267765,
+				"lead_date":"2026-03-23T14:09:25+02:00",
+				"lead_payment":"33.00",
+				"lead_status":"approved",
+				"subid":"1a2b3c",
+				"subid1":"subid1",
+				"subid2":null,
+				"subid3":null,
+				"subid4":null,
+				"subid5":null,
+				"product_name":"Product Name",
+				"offer_name":"Offer Name",
+				"offer_currency":"USD",
+				"offer_geo":"Чехия",
+				"offer_geo_key":"CZ"
+			}
+		]
+	}
 }
-
-/* Главный блок */
-.hero {
-    padding: 60px 20px;
-}
-
-h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 18px;
-    color: #ccc;
-}
-
-/* Кнопка */
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 30px;
-    background: linear-gradient(45deg, purple, blue);
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 20px;
-}
-
-/* Блоки */
-.section {
-    padding: 40px 20px;
-}
-
-.box {
-    margin: 20px auto;
-    max-width: 600px;
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-}
-</style>
-
-</head>
-
-<body>
-
-<!-- 1. Захват внимания -->
-<div class="hero">
-    <h1>Динис Копилов хочешь зарабатывать онлайн?</h1>
-    <p>Без опыта. Без вложений. Начни уже сегодня</p>
-
-    <a href="ССЫЛКА_СЮДА" class="btn" target="_blank">
-        Начать сейчас 🚀
-    </a>
-</div>
-
-<!-- 2. Проблема -->
-<div class="section">
-    <div class="box">
-        <h2>Знакомо?</h2>
-        <p>Нет денег, нет стабильности, не понимаешь с чего начать</p>
-    </div>
-</div>
-
-<!-- 3. Решение -->
-<div class="section">
-    <div class="box">
-        <h2>Решение есть</h2>
-        <p>Я нашёл простой способ зарабатывать онлайн через телефон</p>
-    </div>
-</div>
-
-<!-- 4. Доверие -->
-<div class="section">
-    <div class="box">
-        <h2>Почему это работает?</h2>
-        <p>Ты получаешь готовую систему и просто повторяешь действия</p>
-    </div>
-</div>
-
-<!-- 5. Кнопка -->
-<div class="section">
-    <a href="ССЫЛКА_СЮДА" class="btn" target="_blank">
-        Перейти и начать 💰
-    </a>
-</div>
-
-</body>
-</html>
