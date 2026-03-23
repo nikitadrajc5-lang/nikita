@@ -13,75 +13,20 @@ body, html {
     color: white;
 }
 .overlay {
-    position: relative; /* для бокових фото */
-    max-width: 900px;
+    position: relative; 
+    max-width: 800px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
-h1 { font-size: 50px; margin-bottom: 12px; }
-p.description { font-size: 18px; max-width: 700px; margin: 10px auto; line-height: 1.6; }
-.btn { background-color: #28a745; color: white; padding: 18px 45px; margin-top: 18px; border: none; border-radius: 8px; text-decoration: none; font-size: 22px; cursor: pointer; display:inline-block;}
+h1 { font-size: 50px; margin-bottom: 20px; }
+p.description { font-size: 20px; margin-bottom: 30px; line-height: 1.6; }
+.btn { background-color: #28a745; color: white; padding: 18px 45px; margin-top: 18px; border: none; border-radius: 8px; text-decoration: none; font-size: 22px; cursor: pointer;}
 .btn:hover { background-color: #218838; }
 
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 35px;
-}
-.feature {
-    background-color: rgba(255,255,255,0.15);
-    border-radius: 14px;
-    padding: 22px;
-    margin: 10px;
-    flex: 1 1 260px;
-    max-width: 300px;
-    text-align: center;
-}
-.feature svg { width: 60px; height: 60px; margin-bottom: 12px; }
-.feature h3 { font-size: 20px; color: #ffd54f; margin-bottom: 10px; }
-.feature p { font-size: 16px; line-height: 1.4; }
-
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 35px;
-}
-.product-card {
-    background-color: rgba(255,255,255,0.15);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 12px;
-    width: 260px;
-    text-align: center;
-}
-.product-card img { width: 100%; border-radius: 10px; margin-bottom: 12px; }
-.product-card h3 { color: #ffd54f; margin-bottom: 10px; }
-.product-card p { font-size: 16px; line-height: 1.4; }
-
-footer { margin-top: 42px; font-size: 14px; color: #ddd; }
-
-/* Бокові маленькі фото */
-.side-photo {
-    position: absolute;
-    width: 100px;
-    border-radius: 10px;
-    opacity: 0.9;
-}
-/* Ліва сторона */
-.side-left-1 { top: 50px; left: -120px; }
-.side-left-2 { top: 300px; left: -90px; }
-.side-left-3 { top: 550px; left: -100px; }
-/* Права сторона */
-.side-right-1 { top: 100px; right: -120px; }
-.side-right-2 { top: 350px; right: -90px; }
-.side-right-3 { top: 600px; right: -100px; }
-
 @media (max-width: 800px) {
-    .side-photo { display: none; } /* прибираємо на мобільних */
     h1 { font-size: 36px; }
+    p.description { font-size: 18px; }
     .btn { font-size: 18px; padding: 14px 30px;}
 }
 </style>
@@ -89,68 +34,14 @@ footer { margin-top: 42px; font-size: 14px; color: #ddd; }
 <body>
 <div class="overlay">
 
-    <!-- Центральний блок -->
     <h1>La Mer SHAMPO</h1>
     <p class="description">
-        La Mer SHAMPO — професійний шампунь для глибокого очищення, живлення та зміцнення волосся.
-        Його формула видаляє забруднення та надлишки себуму, не пересушуючи шкіру голови, 
-        сприяє відновленню структури волосся і робить його блискучим та шовковистим після кожного миття.
+        La Mer SHAMPO — професійний шампунь для глибокого очищення та живлення волосся. 
+        Робить волосся блискучим, шовковистим та здоровим після кожного миття.
     </p>
 
-    <!-- Переваги -->
-    <div class="features">
-        <div class="feature">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M12 6a6 6 0 0 0-6 6h2a4 4 0 0 1 4-4z"/></svg>
-            <h3>Глибоке очищення</h3>
-            <p>Дбайливо усуває забруднення та стайлінг без шкоди для волосся.</p>
-        </div>
-        <div class="feature">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM12 19a7 7 0 1 1 7-7 7.008 7.008 0 0 1-7 7z"/></svg>
-            <h3>Зміцнення</h3>
-            <p>Підтримує та зміцнює корені для здорового росту волосся.</p>
-        </div>
-        <div class="feature">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24"><path d="M12 0l3 7h7l-5.5 4.5L18 19l-6-4.5L6 19l1.5-7.5L2 7h7z"/></svg>
-            <h3>Блиск та свіжість</h3>
-            <p>Надає волоссю природного блиску та легкості після миття.</p>
-        </div>
-    </div>
-
-    <!-- Кнопка придбати -->
     <a href="ТВОЄ_АФІЛІЙТНЕ_ПОСИЛАННЯ" class="btn">Придбати</a>
 
-    <!-- Картки продукту -->
-    <div class="products">
-        <div class="product-card">
-            <img src="img/photo1.jpg" alt="La Mer SHAMPO">
-            <h3>La Mer SHAMPO</h3>
-            <p>Глибоке очищення та живлення волосся, робить його блискучим і шовковистим.</p>
-            <a href="ТВОЄ_АФІЛІЙТНЕ_ПОСИЛАННЯ" class="btn">Придбати</a>
-        </div>
-        <div class="product-card">
-            <img src="img/photo2.jpg" alt="La Mer SHAMPO Mask">
-            <h3>La Mer SHAMPO Mask</h3>
-            <p>Інтенсивна маска для відновлення волосся та додаткового блиску.</p>
-            <a href="ТВОЄ_АФІЛІЙТНЕ_ПОСИЛАННЯ" class="btn">Придбати</a>
-        </div>
-        <div class="product-card">
-            <img src="img/photo3.jpg" alt="La Mer Hair Oil">
-            <h3>La Mer Hair Oil</h3>
-            <p>Живильне масло для кінчиків волосся, додає блиску та м’якості.</p>
-            <a href="ТВОЄ_АФІЛІЙТНЕ_ПОСИЛАННЯ" class="btn">Придбати</a>
-        </div>
-    </div>
-
-    <!-- Бокові декоративні фото -->
-    <img src="img/photo1.jpg" class="side-photo side-left-1" photo_2025-06-03 16.53.40.jpeg">
-    <img src="photo_2025-06-03 16.53.40.jpeg" class="side-photo side-left-2" alt="Фото 2">
-    <img src="img/photo3.jpg" class="side-photo side-left-3" alt="Фото 3">
-
-    <img src="img/photo1.jpg" class="side-photo side-right-1" alt="Фото 4">
-    <img src="img/photo2.jpg" class="side-photo side-right-2" alt="Фото 5">
-    <img src="img/photo3.jpg" class="side-photo side-right-3" alt="Фото 6">
-
 </div>
-<footer>© 2026 La Mer SHAMPO | Усі права захищені</footer>
 </body>
 </html>
