@@ -9,38 +9,38 @@
             padding: 0;
             font-family: 'Arial', sans-serif;
             height: 100%;
-            background: url('https://via.placeholder.com/1400x900') no-repeat center center fixed;
+            background: url('https://images.pexels.com/photos/13137903/pexels-photo-13137903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750') no-repeat center center fixed;
             background-size: cover;
             color: white;
         }
 
         .overlay {
-            background-color: rgba(0,0,0,0.7);
+            background-color: rgba(0,0,0,0.65);
             min-height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 25px 15px;
             text-align: center;
         }
 
         h1 {
             font-size: 50px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         p.description {
             font-size: 18px;
             max-width: 700px;
-            margin: 12px 0;
-            line-height: 1.5;
+            margin: 10px 0;
+            line-height: 1.6;
         }
 
         .btn {
             background-color: #28a745;
             color: white;
             padding: 18px 45px;
-            margin-top: 25px;
+            margin-top: 18px;
             border: none;
             border-radius: 8px;
             text-decoration: none;
@@ -52,18 +52,17 @@
             background-color: #218838;
         }
 
-        /* Переваги продукту */
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 40px;
+            margin-top: 35px;
         }
 
         .feature {
             background-color: rgba(255,255,255,0.15);
-            border-radius: 12px;
-            padding: 25px;
+            border-radius: 14px;
+            padding: 22px;
             margin: 10px;
             flex: 1 1 260px;
             max-width: 300px;
@@ -72,18 +71,17 @@
 
         .feature img {
             width: 60px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .feature h3 {
             font-size: 20px;
-            color: #ffdd57;
+            color: #ffd54f;
             margin-bottom: 10px;
         }
 
-        /* Відгуки */
         .reviews {
-            margin-top: 50px;
+            margin-top: 45px;
             max-width: 800px;
             width: 100%;
         }
@@ -91,8 +89,8 @@
         .review {
             background-color: rgba(255,255,255,0.15);
             border-radius: 12px;
-            padding: 20px;
-            margin: 15px 0;
+            padding: 18px 20px;
+            margin: 14px 0;
             text-align: left;
         }
 
@@ -109,23 +107,27 @@
         }
 
         footer {
-            margin-top: 45px;
+            margin-top: 42px;
             font-size: 14px;
             color: #ddd;
         }
 
         @media (max-width: 600px) {
             h1 { font-size: 36px; }
-            .btn { font-size: 18px; padding: 14px 30px; }
-            p.description { font-size: 16px; }
-            .feature h3 { font-size: 18px; }
+            .btn { font-size: 18px; padding: 14px 30px;}
+            p.description { font-size: 16px;}
+            .feature h3 { font-size: 18px;}
         }
     </style>
 </head>
 <body>
     <div class="overlay">
         <h1>La Mer SHAMPO</h1>
-        <p class="description">Професійний шампунь для глибокого очищення волосся та шкіри голови, що поєднує натуральні компоненти для відновлення сили, блиску та здоров’я волосся. La Mer Shampo дбайливо видаляє забруднення та надлишковий себум, готує волосся до подальшого догляду і зміцнює корені для мінімізації випадіння волосся. ✨</p>
+        <p class="description">
+            La Mer SHAMPO — професійний шампунь для глибокого очищення, живлення та зміцнення волосся.
+            Його формула видаляє забруднення та надлишки себуму, не пересушуючи шкіру голови, 
+            сприяє відновленню структури волосся і робить його блискучим та шовковистим після кожного миття.
+        </p>
         
         <a href="#" class="btn">Придбати</a>
 
@@ -133,37 +135,34 @@
             <div class="feature">
                 <img src="https://img.icons8.com/color/96/000000/clean-hands.png" alt="Глибоке очищення">
                 <h3>Глибоке очищення</h3>
-                <p>Ефективно видаляє залишки стайлінгу, себум та забруднення, готуючи волосся до подальшого догляду.</p>
+                <p>Дбайливо усуває забруднення та стайлінг без шкоди для волосся.</p>
             </div>
             <div class="feature">
-                <img src="https://img.icons8.com/color/96/000000/hair-growth.png" alt="Зміцнення коренів">
-                <h3>Зміцнення коренів</h3>
-                <p>Стимулює кровообіг шкіри голови та зміцнює волосяні фолікули для здорового росту волосся.</p>
+                <img src="https://img.icons8.com/color/96/000000/hair-growth.png" alt="Зміцнення">
+                <h3>Зміцнення</h3>
+                <p>Підтримує та зміцнює корені для здорового росту волосся.</p>
             </div>
             <div class="feature">
-                <img src="https://img.icons8.com/color/96/000000/shiny-hair.png" alt="Блиск та свіжість">
+                <img src="https://img.icons8.com/color/96/000000/shiny-hair.png" alt="Блиск">
                 <h3>Блиск та свіжість</h3>
-                <p>Волосся виглядає чистим, слухняним і природно блискучим після кожного миття.</p>
+                <p>Надає волоссю природного блиску та легкості після миття.</p>
             </div>
         </div>
 
-        <!-- Відгуки клієнтів -->
         <div class="reviews">
             <h2>Відгуки клієнтів</h2>
 
             <div class="review">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>“Ніколи не думала, що шампунь може так сильно відновити волосся! Волосся стало блискучим і м’яким.” — Олена, Київ</p>
+                <p>“Волосся стало шовковистим і блискучим вже після першого застосування!” — Олеся, Київ</p>
             </div>
-
             <div class="review">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>“La Mer SHAMPO відмінно очищає і зміцнює корені. Відчуваю здоров’я волосся вже після першого застосування.” — Андрій, Львів</p>
+                <p>“Помітила зміцнення коренів та менше випадіння. Дууже задоволена!” — Андрій, Львів</p>
             </div>
-
             <div class="review">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>“М’який, приємний запах і легкість волосся після миття. Найкращий шампунь, який я пробувала.” — Катерина, Харків</p>
+                <p>“Неймовірний аромат і результат — волосся виглядає здоровим.” — Катерина, Одеса</p>
             </div>
         </div>
 
