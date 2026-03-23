@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <title>La Mer SHAMPO — Професійний шампунь для волосся</title>
     <style>
+           /* Додаємо стилі для бокових фото */
+    .side-photo {
+        position: absolute;
+        width: 100px;
+        border-radius: 10px;
+        opacity: 0.9;
+    }
+
+    .side-left { top: 100px; left: -120px; }
+    .side-right-1 { top: 150px; right: -120px; }
+    .side-right-2 { top: 350px; right: -100px; }
+
+    @media (max-width: 800px) {
+        .side-photo { display: none; }
+    }
         body, html {
             margin: 0;
             padding: 0;
@@ -142,20 +157,7 @@
                 <h3>Глибоке очищення</h3>
                 <p>Дбайливо усуває забруднення та стайлінг без шкоди для волосся.</p>
             </div>
-/* Бокові маленькі фото */
-.side-photo {
-    position: absolute;
-    width: 100px;        /* маленькі картинки */
-    border-radius: 10px;
-    opacity: 0.9;
-}
-.side-left { top: 100px; left: -120px; }
-.side-right-1 { top: 150px; right: -120px; }
-.side-right-2 { top: 350px; right: -100px; }
-
-@media (max-width: 800px) {
-    .side-photo { display: none; }
-}
+            
             <!-- Іконка зміцнення -->
             <div class="feature">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#FFD54F" viewBox="0 0 24 24">
